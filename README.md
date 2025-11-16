@@ -33,6 +33,5 @@ make backend
 | `make playground`    | Launch local development environment with backend and frontend - leveraging `adk web` command.|
 | `make backend`       | Deploy agent to Cloud Run |
 | `make local-backend` | Launch local development server |
-| `uv run jupyter lab` | Launch Jupyter notebook                                                                     |
 
 For full command options and usage, refer to the [Makefile](Makefile).
