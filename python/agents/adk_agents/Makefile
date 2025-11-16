@@ -13,7 +13,7 @@ playground:
 # Usage: make backend [PORT=8080] - Set IAP=true to enable Identity-Aware Proxy, PORT to specify container port
 backend:
 	PROJECT_ID=$$(gcloud config get-value project) && \
-	gcloud beta run deploy agent_11_genai \
+	gcloud beta run deploy adkagent \
 		--source . \
 		--memory "4Gi" \
 		--project $$PROJECT_ID \
@@ -23,15 +23,3 @@ backend:
 		--allow-unauthenticated \
 		--env-vars-file .env \
 		$(if $(PORT),--port=$(PORT))
-
-# Launch local development server with hot-reload
-local-backend:
-	uv run uvicorn app.server:app --host 0.0.0.0 --port 8000 --reload
-
-# Run code quality checks (codespell, ruff, mypy)
-lint:
-	uv sync --dev --extra lint
-	uv run codespell
-	uv run ruff check . --diff
-	uv run ruff format . --check --diff
-	uv run mypy .
