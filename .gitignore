@@ -216,5 +216,3 @@ bin/
 .vscode/
 
 *.zip
-/python/agents/adk_agents/agent_11_genai/**
-/python/agents/adk_agents/agent_11_genai/
