@@ -44,7 +44,7 @@ remote_app = agent_engines.create(
 print("Deploying agent to agent engine finished.")
 print("-" * 50)
 
-print("Testing deployemnt:")
+print("Testing deployment:")
 session = remote_app.create_session(user_id="123")
 for event in remote_app.stream_query(
     user_id="123",
@@ -52,5 +52,5 @@ for event in remote_app.stream_query(
     message="Hello!",
 ):
     print(event)
-print("Testing deployemnt finished!")
+print("Testing deployment finished!")
 print("-" * 50)
