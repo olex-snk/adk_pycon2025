@@ -215,5 +215,5 @@ bin/
 # Local VSCode settings
 .vscode/
 
-python/agents/adk_agents/agent_11_genai/**
+/python/agents/adk_agents/agent_11_genai/**
 /python/agents/adk_agents/agent_11_genai/
